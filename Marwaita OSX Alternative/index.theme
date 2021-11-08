@@ -7,6 +7,6 @@ Encoding=UTF-8
 [X-GNOME-Metatheme]
 GtkTheme=Marwaita OSX Alternative
 MetacityTheme=Marwaita OSX Alternative
-IconTheme=Luna
+IconTheme=Luna-Light
 CursorTheme=Luna
 CursorSize=24
