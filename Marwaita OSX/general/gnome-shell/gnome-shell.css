@@ -136,7 +136,7 @@ StEntry StLabel.hint-text,
 .notification-banner StButton:hover,
 .modal-dialog StButton:hover,
 .popup-menu .button:hover
-{box-shadow: inset 0 0 0 1px rgba(255,255,255, 0.3);}
+{box-shadow: none;}
 
 .message-list .button:active,
 .message-list .button:checked,

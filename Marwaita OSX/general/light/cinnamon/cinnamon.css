@@ -170,7 +170,7 @@ StButton,
 
 StButton:hover,
 #notification .notification-button:hover
-{box-shadow: inset 0 0 0 1px rgba(0,0,0, 0.3);}
+{box-shadow: none;}
 
 StButton:active,
 StButton:checked,
@@ -179,14 +179,16 @@ StButton:checked,
 {box-shadow: inset 0 0 0 9999px rgba(0,0,0, 0.1);}
 
 .applet-box:hover,
+.grouped-window-list-item-box:hover,
+.grouped-window-list-item-box:active:hover,
+.window-list-item-box:hover,
+.window-list-item-box:active:hover
+{background-color: transparent;}
+
 .popup-menu-item:active,
 .menu-favorites-button:hover,
 .menu-category-button-selected,
 .menu-application-button-selected,
-.grouped-window-list-item-box:hover,
-.grouped-window-list-item-box:active:hover,
-.window-list-item-box:hover,
-.window-list-item-box:active:hover,
 .workspace-graph .workspace,
 .osd-window .level,
 .panelLeft:dnd,

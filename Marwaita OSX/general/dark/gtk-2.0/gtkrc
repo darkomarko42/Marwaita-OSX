@@ -94,7 +94,7 @@ style "button"
 	engine "murrine" { roundness = 3 border_shades = { 1.0, 1.0 } }
 
 	bg[NORMAL] =  @base_color
-	bg[PRELIGHT] = mix(0.05, @fg_color,@base_color)
+	bg[PRELIGHT] = @base_color
 	bg[ACTIVE] = mix(0.1, @fg_color,@base_color)
 }
 
