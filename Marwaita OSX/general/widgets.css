@@ -519,13 +519,14 @@ headerbar.toolbar  button:not(.suggested-action):not(.destructive-action).text-b
 	
 .titlebar button.titlebutton,
 .titlebar windowcontrols button{}
-	
+
+.titlebar.windowhandle{padding: 0 4px;}
+
 .titlebar .right,
 .titlebar .left,
 .horizontal .end,
 .horizontal .start{padding: 0 2px;}
 
-.titlebar.windowhandle,
 .titlebar.default-decoration,
 .titlebar.chromium{padding: 0 6px;}
 
