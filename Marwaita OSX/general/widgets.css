@@ -520,17 +520,13 @@ headerbar.toolbar  button:not(.suggested-action):not(.destructive-action).text-b
 .titlebar button.titlebutton,
 .titlebar windowcontrols button{}
 	
-.titlebar.windowhandle,
-.titlebar.default-decoration {} 
-
-.titlebar button.titlebutton,
-windowcontrols button{}
-
 .titlebar .right,
 .titlebar .left,
 .horizontal .end,
 .horizontal .start{padding: 0 2px;}
 
+.titlebar.windowhandle,
+.titlebar.default-decoration,
 .titlebar.chromium{padding: 0 6px;}
 
 .titlebar stackswitcher button.text-button{}
@@ -555,8 +551,7 @@ windowcontrols button{}
 .titlebar button.titlebutton:not(.suggested-action):not(.destructive-action) image,
 .titlebar windowcontrols button:not(.suggested-action):not(.destructive-action) image,
 .titlebar button:not(.suggested-action):not(.destructive-action).chromium,
-.titlebar.default-decoration,
-.titlebar.default-decoration button.titlebutton{color: transparent;}
+.titlebar.default-decoration button.titlebutton:not(.suggested-action):not(.destructive-action){color: transparent;}
 
 /* Action Button */
 
@@ -721,7 +716,6 @@ headerbar.toolbar  button:not(.suggested-action):not(.destructive-action).text-b
 
 /* this fix backdrop ssd text titlebar */
 .titlebar.default-decoration:backdrop,
-.titlebar.default-decoration button.titlebutton:backdrop,
 .titlebar .titlebutton.chromium:backdrop,
 .titlebar .titlebutton:backdrop label,
 .titlebar .titlebutton:backdrop image,
@@ -1355,8 +1349,6 @@ headerbar,
 headerbar:backdrop,
 .titlebar:not(headerbar):backdrop {background-color: @gtk_titlebar_bg_backdrop_color;}
 
-.csd headerbar.default-decoration{}
-
 window.background.csd > headerbar.titlebar > box.horizontal > headerbar:first-child:not(:last-child),
 window.background.csd > headerbar.titlebar > hdyleaflet > headerbar:first-child:not(:last-child),
 window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child:not(:last-child),
@@ -1420,7 +1412,8 @@ window.csd > .titlebar:not(headerbar):backdrop {
 /* this is for ssd titlebars */
 .ssd .default-decoration ,
 .default-decoration.titlebar:not(headerbar),
-.csd .default-decoration.titlebar:not(headerbar){border-bottom: none;}
+.csd .default-decoration.titlebar:not(headerbar),
+.csd headerbar.default-decoration{border-bottom: none;}
  
 /* this fix headerbar widgets */
 
