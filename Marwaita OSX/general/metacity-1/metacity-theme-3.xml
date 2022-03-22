@@ -25,23 +25,25 @@
 
 <!-- geometries -->
 
-<frame_geometry name="normal" title_scale="medium" rounded_top_left="2" rounded_top_right="2">
+<frame_geometry name="normal" title_scale="medium" rounded_top_left="6" rounded_top_right="6">
   <distance name="left_width" value="1"/>
   <distance name="right_width" value="1"/>
   <distance name="bottom_height" value="1"/>
   <distance name="left_titlebar_edge" value="0"/>
-  <distance name="right_titlebar_edge" value="6"/>
+  <distance name="right_titlebar_edge" value="4"/>
   <distance name="title_vertical_pad" value="25"/>
   <border name="title_border" left="0" right="0" top="0" bottom="0"/>
-  <border name="button_border" left="6" right="0" top="5" bottom="4"/>
-  <distance name="button_width" value="18"/>
-  <distance name="button_height" value="24"/>
+  <border name="button_border" left="5" right="0" top="5" bottom="4"/>
+  <aspect_ratio name="button" value="1"/><!-- width of button -->
 </frame_geometry>
 
 <frame_geometry name="max" rounded_top_left="false" rounded_top_right="false" parent="normal">
   <distance name="left_width" value="0"/>
   <distance name="right_width" value="0"/>
   <distance name="bottom_height" value="0"/>
+  <distance name="left_titlebar_edge" value="0"/>
+  <distance name="right_titlebar_edge" value="3"/>
+  <border name="button_border" left="4" right="0" top="4" bottom="4"/>
 </frame_geometry>
 
 <frame_geometry name="tiled_left" parent="normal">
@@ -141,13 +143,17 @@
 <!--left  <rectangle color="B_titlebar" x="0" y="0" width="1" height="height" filled="true"/>-->
 <!--right  <rectangle color="B_titlebar" x="width-1" y="0" width="1" height="height" filled="true"/>-->
 
-<!--top with rounded edges --> <rectangle color="B_titlebar" x="3" y="0" width="width-6" height="1" filled="true"/> 
+<!--top with rounded edges --> 
+<rectangle color="B_titlebar" x="6" y="0" width="width-12" height="1" filled="true"/> 
+<line color="B_titlebar" x1="0" y1="6" x2="0" y2="top_height-1"/>
+<line color="B_titlebar" x1="width-1" y1="6" x2="width-1" y2="top_height-1"/>
 
-<!--top left--> <line color="B_titlebar" x1="0" y1="3" x2="0" y2="top_height-1"/>
-<line color="B_titlebar" x1="0" y1="2" x2="2" y2="0"/>
-
-<!--top right--> <line color="B_titlebar" x1="width-1" y1="3" x2="width-1" y2="top_height-1"/>
-<line color="B_titlebar" x1="width-1" y1="2" x2="width-3" y2="0"/>
+<!--top left--> 
+<line color="B_titlebar" x1="3" y1="1" x2="5" y2="0"/>
+<line color="B_titlebar" x1="0" y1="5" x2="2" y2="2"/>
+<!--top right--> 
+<line color="B_titlebar" x1="width-4" y1="1" x2="width-6" y2="0"/>
+<line color="B_titlebar" x1="width-3" y1="2" x2="width-1" y2="5"/>
 	
 </draw_ops>
 
@@ -165,13 +171,17 @@
 
 <draw_ops name="dialog_edges">
 
-<!--DIALOG top with rounded edges --> <rectangle color="D_B_titlebar" x="3" y="0" width="width-6" height="1" filled="true"/> 
+<!--DIALOG top with rounded edges --> 
+<rectangle color="D_B_titlebar" x="6" y="0" width="width-12" height="1" filled="true"/> 
+<line color="D_B_titlebar" x1="0" y1="6" x2="0" y2="top_height-1"/>
+<line color="D_B_titlebar" x1="width-1" y1="6" x2="width-1" y2="top_height-1"/>
 
-<!--top left--> <line color="D_B_titlebar" x1="0" y1="3" x2="0" y2="top_height-1"/>
-<line color="D_B_titlebar" x1="0" y1="2" x2="2" y2="0"/>
-
-<!--top right--> <line color="D_B_titlebar" x1="width-1" y1="3" x2="width-1" y2="top_height-1"/>
-<line color="D_B_titlebar" x1="width-1" y1="2" x2="width-3" y2="0"/>
+<!--top left--> 
+<line color="D_B_titlebar" x1="3" y1="1" x2="5" y2="0"/>
+<line color="D_B_titlebar" x1="0" y1="5" x2="2" y2="2"/>
+<!--top right--> 
+<line color="D_B_titlebar" x1="width-4" y1="1" x2="width-6" y2="0"/>
+<line color="D_B_titlebar" x1="width-3" y1="2" x2="width-1" y2="5"/>
 	
 </draw_ops>
 
@@ -496,11 +506,11 @@
 </draw_ops>
 
 <draw_ops name="button_focused_prelight">
-  <image filename="button.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" alpha="0.0" colorize="C_title_focused"/>
+  <image filename="button.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" alpha="0.1" colorize="C_title_focused"/>
 </draw_ops>
 
 <draw_ops name="button_focused_pressed">
-  <image filename="button.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" alpha="0.0" colorize="C_title_focused"/>
+  <image filename="button.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" alpha="0.15" colorize="C_title_focused"/>
 </draw_ops>
 
 <draw_ops name="button_unfocused">
