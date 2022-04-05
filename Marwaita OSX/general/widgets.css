@@ -681,14 +681,14 @@ radio:indeterminate:disabled,
 .titlebar .titlebutton.chromium:backdrop,
 .titlebar .titlebutton:backdrop label,
 .titlebar:backdrop label,
+.titlebar:backdrop image,
 menubar:backdrop,
 .menubar:backdrop,
 window.background:not(.csd):not(.solid-csd) > grid.horizontal > grid.horizontal:backdrop
 {color: mix(@gtk_titlebar_fg_color, @gtk_titlebar_bg_backdrop_color, 0.5);}
 
 .titlebar.default-decoration button.titlebutton:backdrop,
-.titlebar .titlebutton:backdrop image,
-.titlebar:backdrop image
+.titlebar .titlebutton:backdrop image
 {color: transparent;}
 
 button:checked:disabled
