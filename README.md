@@ -1,5 +1,5 @@
 # Marwaita OSX
-GTK theme for Budgie desktop
+GTK theme for Cinnamon desktop
 
 ## Requirments
 
